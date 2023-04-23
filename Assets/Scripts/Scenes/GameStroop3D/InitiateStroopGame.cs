@@ -137,13 +137,9 @@ public class InitiateStroopGame : MonoBehaviour
     public void InitiateTextColor()
     {
         int  id= 0;
-        Debug.Log("Bleu : " + inventory.NbBlue);
         CreateText(inventory.NbBlue, "bleu",ref id) ;
-        Debug.Log("Vert : " + inventory.NbGreen);
         CreateText(inventory.NbGreen, "vert", ref id);
-        Debug.Log("Rouge : " + inventory.NbRed);
         CreateText(inventory.NbRed, "rouge", ref id);
-        Debug.Log("Jaune : " + inventory.NbYellow);
         CreateText(inventory.NbYellow, "jaune", ref id);
         MixTextColor();
 
@@ -168,8 +164,6 @@ public class InitiateStroopGame : MonoBehaviour
             TextColor textColored = new TextColor(id, colorText, text);
             ListTexts.Add(textColored);
             id++;
-
-            Debug.Log("text :" +text + " Couleur : " + colorText.ToString());
         }
     }
 

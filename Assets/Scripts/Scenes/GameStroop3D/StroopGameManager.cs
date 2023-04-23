@@ -56,7 +56,6 @@ public class StroopGameManager : MonoBehaviour
 
     public void DisplayColorText()
     {
-        Debug.Log("ici");
         //On affiche le texte correspondant au nom de la couleur à trouver
         
         TextDisplayed.text = inventory.listText[indexPlayer].text;
@@ -73,7 +72,6 @@ public class StroopGameManager : MonoBehaviour
         //Si le diamant choisi est celui qu'il faut ramasser,on passe au texte suivant
         if (colorDiams == textReference.text)
         {
-            Debug.Log("OK");
             indexPlayer++;
             inventory.DiamsCount++;
 
@@ -91,7 +89,6 @@ public class StroopGameManager : MonoBehaviour
         //Sinon on enlève un point de vie au joueur
         else
         {
-            Debug.Log("Wrong !");
             healthState.WrongDiamants();
 
             //On vérifie si GameOver 
@@ -132,7 +129,6 @@ public class StroopGameManager : MonoBehaviour
         if (quitIsClosed)
         {
             QuitGame.SetBool("isOpen", true);
-            Debug.Log("Ouvert");
             quitIsClosed = false;
         }
 

@@ -32,7 +32,6 @@ public class HealthState : MonoBehaviour
 
     public void WrongDiamants()
     {
-        Debug.Log("wrong diamants");
         currentHealth--;
         healthBar.SetHealth(currentHealth);
 

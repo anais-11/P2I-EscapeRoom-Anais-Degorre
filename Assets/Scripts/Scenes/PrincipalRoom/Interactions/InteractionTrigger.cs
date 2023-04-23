@@ -35,7 +35,6 @@ public class InteractionTrigger : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D infoCollision)
     {
         currentCollision = infoCollision;
-        Debug.Log(currentCollision.gameObject.name);
         if (InteractionObjectExist(currentCollision.gameObject.name))
         {
             isInCollision = true;
@@ -120,11 +119,9 @@ public class InteractionTrigger : MonoBehaviour
         {
             if (interaction.NameObject == name)
             {
-                Debug.Log(interaction.NameObject);
                 result = true;
             }
         }
-        Debug.Log(result);
         return result;
     }
 }

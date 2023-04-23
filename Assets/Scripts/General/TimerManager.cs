@@ -69,7 +69,6 @@ public class TimerManager : MonoBehaviour
 
     public void TimeIsOver()
     {
-        Debug.Log("affiche la pop up");
         //On récupère et instancie la pop-up qui indique à l'utilisateur qu'il a perdu
         //Puis on définit le clic sur le bouton rejouer pour qu'il appelle la fonction replay
        
@@ -78,7 +77,6 @@ public class TimerManager : MonoBehaviour
         GameObject ObjectButton = GameObject.Find("TimesUp");
         Button buttonReplay = ObjectButton.transform.Find("Button").GetComponent<Button>();
         buttonReplay.onClick.AddListener(Replay);
-        Debug.Log("bouton ok");
 
 
         Scene currentScene = SceneManager.GetActiveScene();//On récupère la scène actuelle

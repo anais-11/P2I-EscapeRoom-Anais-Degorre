@@ -22,7 +22,6 @@ public class Inventory : MonoBehaviour
     {
         if (instance != null && instance != this)
         {
-            Debug.LogWarning("Il y a plus d'une instance de l'inventaire dans la scène");
             Destroy(gameObject);
 
             return;

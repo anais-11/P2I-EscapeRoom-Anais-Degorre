@@ -22,18 +22,15 @@ public class CarousselClues : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.LogWarning("Il y a plus d'une instance du caroussel dans la scène ");
             return;
         }
         instance = this;
         DontDestroyOnLoad(this.gameObject);
-        Debug.Log("AWAKE");
     }
     // Use this for initialization
     void Start()
     {
         Initiate();
-        Debug.Log("START");
     }
 
     //On récupère tous les objets de la scne nécessaire au fonctionnement du caroussel
@@ -85,16 +82,10 @@ public class CarousselClues : MonoBehaviour
     //Affiche les indices trouvés
     public void DisplayCluesFind()
     {
-        Debug.Log("Je suis deisplay");
         //On désactive pour l'instant les indices affichés
         orderClue.SetActive(false);
         positionClues.SetActive(false);
 
-        foreach(int id in InventoryManager.inventory.cluesFound)
-        {
-            Debug.Log(id);
-        }
-        
         //Si aucun indice n'a été trouvé, on affiche un message par défaut
         if (InventoryManager.inventory.cluesFound.Count != 0)
         {
@@ -103,9 +94,6 @@ public class CarousselClues : MonoBehaviour
 
             //Récupération de l'id de l'indice à la position actuelle
             int id = InventoryManager.inventory.cluesFound[currentPosition];
-            Debug.Log("curentPosition : " + currentPosition);
-
-            Debug.Log("id : " + id);
             //Si c'est l'indice permettant de savoir l'ordre des clics sur les cubes
             if (id == 4)
             {
@@ -115,7 +103,6 @@ public class CarousselClues : MonoBehaviour
             }
             else
             {
-                Debug.Log("J'affiche");
                 positionClues.SetActive(true);
                 InventoryManager.inventory.InstanciateClueCubesPosition(id, ".2");
 
@@ -128,7 +115,6 @@ public class CarousselClues : MonoBehaviour
     //Affiche l'indice précédent
     public void DisplayPreviousClue()
     {
-        Debug.Log("Je suis previous");
         currentPosition--;
         if (currentPosition <0)
         {
@@ -141,7 +127,6 @@ public class CarousselClues : MonoBehaviour
     //Affiche l'indice suivant
     public void DisplayNextClue()
     {
-        Debug.Log("Je suis next");
         currentPosition++;
         if (currentPosition >= InventoryManager.inventory.cluesFound.Count)
         {

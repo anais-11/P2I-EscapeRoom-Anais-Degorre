@@ -37,7 +37,6 @@ public class GameSceneManager : MonoBehaviour
             timer = GameObject.Find("Timer").GetComponent<TimerManager>();
             Animator WelcomeAnimator = GameObject.Find("WelcomeRules").GetComponent<Animator>();
             WelcomeAnimator.SetBool("isOpen", true);
-            Debug.Log("animator ouvert");
 
             GameObject ObjectButton = GameObject.Find("WelcomeRules");
             Button buttonStart = ObjectButton.transform.Find("Button").GetComponent<Button>();
@@ -86,7 +85,6 @@ public class GameSceneManager : MonoBehaviour
         //Permet d'ouvrir le caroussel des indices trouvés
         btnCluesInventory = GameObject.Find("ButtonClue").GetComponent<Button>();
         btnCluesInventory.onClick.AddListener(OpenCarousselClues);
-        Debug.Log("Object found");
 
         
         timer = GameObject.Find("Timer").GetComponent<TimerManager>();
@@ -97,7 +95,6 @@ public class GameSceneManager : MonoBehaviour
     //Permet d'ouvrir  
     public void OpenCarousselClues()
     {
-        Debug.Log("Je veux ouvrir le caroussel");
         carousselClues.OpenCaroussel();
     }
 

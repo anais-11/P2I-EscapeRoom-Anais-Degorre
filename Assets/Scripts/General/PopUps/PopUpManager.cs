@@ -20,7 +20,6 @@ public class PopUpManager : MonoBehaviour
     //Ferme la pop-up en l'activant
     public void ClosePopUp()
     {
-        Debug.Log("Fermetuuuure");
         
         gameObject.SetActive(false);
     }

@@ -82,7 +82,6 @@ public class GameColorManager : MonoBehaviour
     //Récupère les clics sur les cubes du joueur
     public void SetPlayerCombinaison(int id)
     {
-        Debug.Log(id);
         playerCombination.Add(id);
 
         //Une fois sa combinaison complétée

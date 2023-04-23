@@ -26,7 +26,6 @@ public class ActionManager : MonoBehaviour
     {
         if (instanceAction != null)
         {
-            Debug.LogWarning("Il y a plus d'une instance d'actionManager dans la scène ");
             return;
         }
         instanceAction = this;
@@ -57,7 +56,6 @@ public class ActionManager : MonoBehaviour
                 ShowClueColor(name);
                 break;
             case "arcade":
-                Debug.Log("arcade 1");
                 ArcadeAction();
                 break;
 

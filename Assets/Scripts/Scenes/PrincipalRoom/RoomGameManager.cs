@@ -21,7 +21,6 @@ public class RoomGameManager : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.LogWarning("Il y a plus d'une instance d'interactionManager dans la scène ");
             return;
         }
         instance = this;
